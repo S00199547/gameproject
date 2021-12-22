@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Finalgameproject">
         <activity
+            android:name=".Screen4"
+            android:exported="false" />
+        <activity
+            android:name=".Screen3"
+            android:exported="false" />
+        <activity
             android:name=".Screen2"
             android:exported="false" />
         <activity

@@ -7,135 +7,149 @@
     android:background="#DCAAA7"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="548dp"
         android:text=" Random sequence based game"
         android:textColor="@color/Black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintBottom_toTopOf="@+id/btn6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.178" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Pink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="4dp"
         android:background="@drawable/circular_button"
-        app:layout_constraintBottom_toTopOf="@+id/Red"
-        app:layout_constraintStart_toEndOf="@+id/btnn1"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/btnSelectedYellow"
+        app:layout_constraintTop_toTopOf="@+id/btnSelectedPink"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/Red"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
         android:background="@drawable/circular_button_red"
-        app:layout_constraintBottom_toTopOf="@+id/SkyBlue"
-        tools:ignore="SpeakableTextPresentCheck"
-        tools:layout_editor_absoluteX="145dp" />
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btndoplay"
+        app:layout_constraintStart_toStartOf="@+id/btnSelectedRed"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/SkyBlue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="9dp"
         android:background="@drawable/circular_button_yellow"
-        app:layout_constraintBottom_toTopOf="@+id/Yellow"
-        tools:ignore="SpeakableTextPresentCheck"
-        tools:layout_editor_absoluteX="145dp" />
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSelectedSkyBlue"
+        app:layout_constraintEnd_toEndOf="@+id/btnSelectedSkyBlue"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/Yellow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="3dp"
         android:background="@drawable/circular_button_gold"
-        app:layout_constraintBottom_toTopOf="@+id/btndoplay"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/SkyBlue"
+        app:layout_constraintTop_toTopOf="@+id/btnSelectedYellow"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <View
-        android:id="@+id/btnn1"
-        android:layout_width="57dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn5"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/btnSelectedPink"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:foreground="?android:attr/autofilledHighlight"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnSelectedYellow"
+        app:layout_constraintEnd_toEndOf="@+id/Yellow"
+        app:layout_constraintStart_toStartOf="@+id/Pink"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <View
-        android:id="@+id/btn2"
-        android:layout_width="57dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="272dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.415"
-        app:layout_constraintStart_toEndOf="@+id/SkyBlue" />
+        android:id="@+id/btnSelectedYellow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="25dp"
+        android:foreground="?android:attr/autofilledHighlight"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnSelectedSkyBlue"
+        app:layout_constraintEnd_toEndOf="@+id/Yellow"
+        app:layout_constraintStart_toStartOf="@+id/Yellow"
+        app:layout_constraintTop_toBottomOf="@+id/btnSelectedPink" />
 
     <View
-        android:id="@+id/btn3"
-        android:layout_width="57dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn2"
+        android:id="@+id/btnSelectedSkyBlue"
+        android:layout_width="114dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:foreground="?android:attr/autofilledHighlight"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnSelectedRed"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.415"
-        app:layout_constraintStart_toEndOf="@+id/Red" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSelectedYellow" />
 
     <View
         android:id="@+id/btn4"
-        android:layout_width="57dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="52dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.388"
-        app:layout_constraintStart_toEndOf="@+id/Pink" />
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/Red" />
 
     <View
-        android:id="@+id/btn5"
-        android:layout_width="57dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn6"
-        app:layout_constraintEnd_toStartOf="@+id/Red"
-        app:layout_constraintHorizontal_bias="0.44"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/btnSelectedRed"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:foreground="?android:attr/autofilledHighlight"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btndoplay"
+        app:layout_constraintEnd_toEndOf="@+id/btndoplay"
+        app:layout_constraintStart_toStartOf="@+id/Yellow"
+        app:layout_constraintTop_toBottomOf="@+id/btnSelectedSkyBlue" />
+
 
     <View
         android:id="@+id/btn6"
-        android:layout_width="57dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="272dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/SkyBlue"
-        app:layout_constraintHorizontal_bias="0.426"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintEnd_toStartOf="@+id/btndoplay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/btndoplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="161dp"
         android:layout_marginBottom="8dp"
         android:onClick="doPlay"
         android:text="Play"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/btn6"
+        app:layout_constraintTop_toBottomOf="@+id/btnSelectedRed" />
 
     <Button
         android:id="@+id/button"
@@ -146,8 +160,8 @@
         android:text="Move"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btndoplay" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
